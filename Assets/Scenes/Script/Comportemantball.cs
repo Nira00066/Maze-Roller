@@ -21,5 +21,16 @@ public class Comportemantball : MonoBehaviour
         GUI.Label(new Rect(500, 350, 200, 0), "Gyro attitude" + m_Gyro.attitude);
         GUI.Label(new Rect(500, 400, 200, 0), "Gyro enabled : " + m_Gyro.enabled);
     }
+
+    void Update()
+    {
+// debugger pour voir si on accède au gyroscope 
+Debug.Log (m_Gyro.attitude);
+Debug.Log ("essai");
+
+
+
+
+    }
 }
 //voir si c'est bon 
