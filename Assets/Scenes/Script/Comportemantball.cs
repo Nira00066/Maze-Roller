@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Comportemantball : MonoBehaviour
 {
+    [SerializeField] GameObject ball;
+    private Rigidbody RgbBall;
        Gyroscope m_Gyro;
 
     void Start()
