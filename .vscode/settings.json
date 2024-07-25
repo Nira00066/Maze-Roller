@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Mainproject.sln"
+    "dotnet.defaultSolution": "Maze-Roller.sln"
 }
