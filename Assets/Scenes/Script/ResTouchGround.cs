@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ResTouchGround : MonoBehaviour
 {
@@ -9,12 +10,11 @@ public class ResTouchGround : MonoBehaviour
 
     [SerializeField] GameObject Ground;
 
-    private Rigidbody rbBall;
+    private Collider rbBall;
 
-    private Rigidbody RbGround;
+    private Collider RbGround;
 
-    private bool hasTouch = false;
-
+    private Rigidbody ball;
     private Vector3 initialPosition;
     private Camera cam;
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class ResTouchGround : MonoBehaviour
     {
         cam = Camera.main;
 
-        initialPosition = rbBall.position;
+        initialPosition = ball.position;
 
 
     }
@@ -41,8 +41,8 @@ public class ResTouchGround : MonoBehaviour
     void Respawn()
     {
         // Réinitialiser la position et la vitesse de la balle
-        rbBall.position = initialPosition;
-        rbBall.velocity = Vector3.zero;
-        rbBall.angularVelocity = Vector3.zero;
+        ball.position = initialPosition;
+        ball.velocity = Vector3.zero;
+        ball.angularVelocity = Vector3.zero;
     }
 }
