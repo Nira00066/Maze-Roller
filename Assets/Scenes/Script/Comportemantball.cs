@@ -22,3 +22,4 @@ public class Comportemantball : MonoBehaviour
         GUI.Label(new Rect(500, 400, 200, 0), "Gyro enabled : " + m_Gyro.enabled);
     }
 }
+//voir si c'est bon 
