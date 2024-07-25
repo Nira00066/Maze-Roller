@@ -6,9 +6,9 @@ using UnityEngine.UIElements;
 
 public class ResTouchGround : MonoBehaviour
 {
-    [SerializeField] GameObject Ball;
+    // [SerializeField] GameObject Ball;
 
-    [SerializeField] GameObject Ground;
+    // [SerializeField] GameObject Ground;
 
     private Collider rbBall;
 
@@ -21,8 +21,11 @@ public class ResTouchGround : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-
+        // Je vais chercher le Rigidbody de l'objet qui instancie la classe 
+        ball = GetComponent<Rigidbody>();
         initialPosition = ball.position;
+
+    // ajouter une condition s'il n'y a pas de Rigidbody pour afficher un message d'erreur  + ne pas appeler initialPosition
 
 
     }
@@ -32,10 +35,14 @@ public class ResTouchGround : MonoBehaviour
     {
     }
 
-    void OnTriggerEnter(Collider other ){
-        if (other.gameObject.CompareTag("Background")){
+   void OnCollisionEnter(Collision collision)
+    {
+
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Background"))
+        {
             Debug.Log("Game Over");
-              Respawn();
+            Respawn();
         }
     }
     void Respawn()

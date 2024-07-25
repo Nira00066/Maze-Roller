@@ -1244,6 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 522015830}
   - component: {fileID: 522015831}
+  - component: {fileID: 522015832}
   m_Layer: 0
   m_Name: GameScene
   m_TagString: Untagged
@@ -1283,6 +1284,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1326725673}
+--- !u!114 &522015832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522015829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7db0b9f74aa914d815751813049b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 1326725673}
+  Ground: {fileID: 2101940981}
 --- !u!1 &577753428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,7 +3595,7 @@ GameObject:
   - component: {fileID: 2101940982}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

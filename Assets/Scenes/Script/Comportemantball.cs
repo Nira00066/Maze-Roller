@@ -34,7 +34,7 @@ public class Comportemantball : MonoBehaviour
         {
             // Read gyroscope data
             gyroRotation = m_Gyro.rotationRateUnbiased;
-            Debug.Log($"Gyro Rotation: {gyroRotation}");
+            // Debug.Log($"Gyro Rotation: {gyroRotation}");
         }
     }
 
@@ -45,7 +45,7 @@ public class Comportemantball : MonoBehaviour
             // Apply force to the ball based on the gyroscope
             Vector3 force = new Vector3 (gyroRotation.z, 0, gyroRotation.x) * 15;
             RgbBall.AddForce(force);
-            Debug.Log($"Applied force: {force}");
+            // Debug.Log($"Applied force: {force}");
         }
     }
 }
