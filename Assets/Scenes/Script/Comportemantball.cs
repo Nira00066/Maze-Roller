@@ -10,6 +10,8 @@ public class Comportemantball : MonoBehaviour
 
     void Start()
     {
+        RgbBall = GetComponent<Rigidbody>();
+
         //Set up and enable the gyroscope (check your device has one)
         m_Gyro = Input.gyro;
         m_Gyro.enabled = true;
@@ -27,10 +29,15 @@ public class Comportemantball : MonoBehaviour
     void Update()
     {
 // debugger pour voir si on accède au gyroscope 
-Debug.Log (m_Gyro.attitude);
-Debug.Log ("essai");
 
+        if (Input.gyro.enabled)
+        {
+            // Lire les données du gyroscope
+            Vector3 gyroRotation = Input.gyro.rotationRateUnbiased;
 
+            // Appliquer une force à la balle en fonction du gyroscope
+            RgbBall.AddForce(new Vector3(gyroRotation.x, 0, gyroRotation.y) * Time.deltaTime * 500);
+        }
 
 
     }
