@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ResTouch : MonoBehaviour
+public class GyroController : MonoBehaviour
 {
     // [SerializeField] GameObject Ball;
 
@@ -12,7 +12,10 @@ public class ResTouch : MonoBehaviour
 
     private Collider rbBall;
 
-    private Collider RbBlock;
+[SerializeField] GameObject obstacle;
+
+[SerializeField] GameObject game;
+    private Collider Rbcube;
 
     private Rigidbody ball;
     private Vector3 initialPosition;
@@ -40,17 +43,11 @@ public class ResTouch : MonoBehaviour
     {
 
         Debug.Log("Collision detected with: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Background"))
+        if (collision.gameObject.CompareTag("Block"))
         {
             Debug.Log("Game Over");
-            Respawn();
+         
         }
     }
-    void Respawn()
-    {
-        // Réinitialiser la position et la vitesse de la balle
-        ball.position = initialPosition;
-        ball.velocity = Vector3.zero;
-        ball.angularVelocity = Vector3.zero;
-    }
+
 }
