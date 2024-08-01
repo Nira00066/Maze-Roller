@@ -7,6 +7,8 @@ public class SceneController : MonoBehaviour
 {
   public void LoadScene(int sceneIndex){
     SceneManager.LoadScene(sceneIndex);
+    Debug.Log ("test");
+  
   }
   public void QuitGame(){
     Application.Quit();
