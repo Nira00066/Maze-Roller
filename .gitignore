@@ -71,3 +71,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Ignore TerrainSampleAssets
+/[Aa]ssets/TerrainSampleAssets/
+/Assets/Forest\ Grounds\ -\ Terrain\ Texture\ Pack/
+# Ignore TextMesh Pro asset
+/Assets/TextMesh\ Pro/
