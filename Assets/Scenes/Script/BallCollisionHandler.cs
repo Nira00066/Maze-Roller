@@ -4,7 +4,7 @@ public class BallCollisionHandler : MonoBehaviour
 {
     // Facteur de multiplication pour la force de rebond
     [SerializeField] GameObject ball;
-    public float reboundMultiplier = 5.0f;
+    public float reboundMultiplier = 4.0f;
 
     // Référence au Rigidbody de la balle
     private Rigidbody rb;

@@ -43,7 +43,7 @@ public class Comportemantball : MonoBehaviour
         if (m_Gyro.enabled)
         {
             // Apply force to the ball based on the gyroscope
-            Vector3 force = new Vector3 (gyroRotation.z, 0, gyroRotation.x) * 15;
+            Vector3 force = new Vector3 (gyroRotation.z, 0, gyroRotation.x) * 13;
             RgbBall.AddForce(force);
             // Debug.Log($"Applied force: {force}");
         }
